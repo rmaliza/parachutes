@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -f /etc/yum.conf ]; then
+   wget https://codeload.github.com/rmaliza/parachutes/zip/master
+   unzip master
+   chmod +x parachutes-master/install.sh
+   ./install.sh
+else
+   echo "Your distribution is not supported by this StackScript"
+   exit
+fi
