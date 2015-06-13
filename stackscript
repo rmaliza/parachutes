@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ -f /etc/yum.conf ]; then
+if [ -f /etc/yum.repos.d/elastix.repo ]; then
+   echo "You already have installed Eastix 2.5"
+   exit
+else
    wget --no-check-certificate https://codeload.github.com/rmaliza/parachutes/zip/master
    unzip master
    chmod +x parachutes-master/install.sh
    ./parachutes-master/install.sh
-else
-   echo "Your distribution is not supported by this StackScript"
-   exit
 fi
