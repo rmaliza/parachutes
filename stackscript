@@ -2,6 +2,7 @@
 
 if [ -f /etc/yum.repos.d/elastix.repo ]; then
    echo "You already have installed Eastix 2.5"
+   rm -f /root/StackScript
    exit
 else
    wget --no-check-certificate https://codeload.github.com/rmaliza/parachutes/zip/master
