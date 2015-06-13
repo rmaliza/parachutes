@@ -6,5 +6,5 @@ mv parachutes-master/rpm-gpg /etc/pki/
 mv /etc/yum.repos.d /etc/yum.repos.d_source
 mv parachutes-master/yum.repos.d /etc/
 yum -y install $(cat parachutes-master/package_elastix-2.5)
-rm StackScript
+rm /root/StackScript
 reboot
